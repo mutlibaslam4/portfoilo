@@ -1,7 +1,6 @@
 import About from "@/components/About";
 import BlogTeaser from "@/components/BlogTeaser";
 import Contact from "@/components/Contact";
-import GithubStats from "@/components/GithubStats";
 import Hero from "@/components/Hero";
 import Loader from "@/components/Loader";
 import Services from "@/components/Services";
@@ -27,7 +26,7 @@ export default function Home() {
       <main className="relative z-10">
         <Hero />
         <About />
-        <GithubStats />
+        {/* <GithubStats /> — hidden: only 1 public repo so far */}
         <Services />
         <Work />
         {/* <Testimonials /> */}

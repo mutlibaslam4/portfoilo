@@ -1,4 +1,5 @@
 import { profile } from "@/data/site";
+import { siteUrl } from "@/lib/site";
 
 const clean = (v: unknown, max: number) => (typeof v === "string" ? v.trim().slice(0, max) : "");
 const esc = (s: string) => s.replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]!);
@@ -23,9 +24,27 @@ export async function POST(req: Request) {
 
   const key = process.env.RESEND_API_KEY;
   if (!key) {
-    // not configured yet: log so the flow can be tested locally
-    console.log("[contact] RESEND_API_KEY not set — message not emailed:", { name, email, message });
-    return Response.json({ ok: true, dev: true });
+    // no Resend key: deliver through FormSubmit (free, no key; the inbox owner confirms once by email)
+    const to = process.env.CONTACT_TO ?? profile.email;
+    try {
+      const res = await fetch(`https://formsubmit.co/ajax/${encodeURIComponent(to)}`, {
+        method: "POST",
+        // FormSubmit rejects requests that don't look like they come from a website
+        headers: { "Content-Type": "application/json", Accept: "application/json", Origin: siteUrl, Referer: `${siteUrl}/` },
+        body: JSON.stringify({
+          name,
+          email,
+          message,
+          _subject: `Portfolio inquiry from ${name}`,
+          _replyto: email,
+          _template: "table",
+          _captcha: "false",
+        }),
+      });
+      const data = (await res.json().catch(() => ({}))) as { success?: string | boolean };
+      if (res.ok && String(data.success) === "true") return Response.json({ ok: true });
+    } catch {}
+    return Response.json({ ok: false, error: "Could not send message." }, { status: 502 });
   }
 
   const res = await fetch("https://api.resend.com/emails", {
