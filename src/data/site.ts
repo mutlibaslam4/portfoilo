@@ -7,7 +7,7 @@ export const profile = {
   /** dummy booking link — replace with your Cal.com / Calendly URL */
   bookingUrl: "https://cal.com/your-name/30min",
   /** leave empty to show sample GitHub numbers; set a username for live stats */
-  github: "",
+  github: "mutlibaslam4",
   cv: "/cv.pdf",
   headline: "I build fast, scalable web applications.",
   subline:

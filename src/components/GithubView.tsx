@@ -25,8 +25,10 @@ export default function GithubView({ data }: { data: GithubData }) {
     <section className="mx-auto max-w-6xl px-5 py-28">
       <SectionHeading eyebrow={t("github.eyebrow")} title={t("github.title")} />
       <Reveal delay={0.1}>
-        <div className="mt-12 grid gap-5 rounded-3xl border border-line bg-panel p-6 sm:p-10 lg:grid-cols-[auto_1fr]">
-          <div className="grid grid-cols-3 gap-6 lg:grid-cols-1" dir="ltr">
+        <div
+          className={`mt-12 grid gap-5 rounded-3xl border border-line bg-panel p-6 sm:p-10 ${data.live ? "" : "lg:grid-cols-[auto_1fr]"}`}
+        >
+          <div className={`grid grid-cols-3 gap-6 ${data.live ? "" : "lg:grid-cols-1"}`} dir="ltr">
             {items.map((s) => (
               <div key={s.l}>
                 <p className="font-display text-4xl font-bold text-accent">{s.v.toLocaleString("en-US")}</p>
@@ -34,14 +36,16 @@ export default function GithubView({ data }: { data: GithubData }) {
               </div>
             ))}
           </div>
-          <div className="overflow-hidden" dir="ltr">
-            <p className="mb-3 font-mono text-xs text-muted">{t("github.sample")}</p>
-            <div className="grid grid-flow-col grid-rows-7 gap-1">
-              {cells.map((c, i) => (
-                <span key={i} className={`aspect-square min-w-[10px] rounded-[3px] ${level[c]}`} />
-              ))}
+          {!data.live && (
+            <div className="overflow-hidden" dir="ltr">
+              <p className="mb-3 font-mono text-xs text-muted">{t("github.sample")}</p>
+              <div className="grid grid-flow-col grid-rows-7 gap-1">
+                {cells.map((c, i) => (
+                  <span key={i} className={`aspect-square min-w-[10px] rounded-[3px] ${level[c]}`} />
+                ))}
+              </div>
             </div>
-          </div>
+          )}
         </div>
       </Reveal>
     </section>
