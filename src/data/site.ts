@@ -2,7 +2,7 @@ export const profile = {
   name: "Mutlib Aslam",
   role: "Full-Stack Developer",
   email: "mutlibaslam4@gmail.com",
-  /** international format, digits only — dummy number */
+  /** international format, digits only — same number as on the CV */
   whatsapp: "+923091550508",
   /** dummy booking link — replace with your Cal.com / Calendly URL */
   bookingUrl: "https://cal.com/your-name/30min",
@@ -23,7 +23,6 @@ export const nav = [
   { key: "about", href: "/#about" },
   { key: "services", href: "/#services" },
   { key: "work", href: "/#work" },
-  { key: "pricing", href: "/#pricing" },
   { key: "blog", href: "/blog" },
   { key: "contact", href: "/#contact" },
 ];
@@ -36,44 +35,46 @@ export const stats = [
   { value: 140, suffix: "+", key: "stats.tests", label: "Automated tests written" },
 ];
 
+// taken from the CV's technical skills
 export const techStack = [
+  "React.js",
   "Next.js",
-  "React",
+  "JavaScript",
   "TypeScript",
   "Node.js",
-  "Tailwind CSS",
-  "PostgreSQL",
-  "MongoDB",
-  "GraphQL",
-  "Docker",
-  "AWS",
-  "Framer Motion",
-  "Prisma",
+  "HTML5",
+  "CSS3",
+  "PHP",
+  "WordPress",
+  "WooCommerce",
+  "REST APIs",
+  "Git & GitHub",
+  "Puppeteer",
 ];
 
 export const services = [
   {
     icon: "◧",
     title: "Frontend Development",
-    text: "Pixel-perfect, accessible interfaces in React and Next.js with buttery animations.",
+    text: "Responsive, reusable interfaces in React.js and Next.js with TypeScript.",
     span: "md:col-span-2",
   },
   {
     icon: "◨",
     title: "Backend Development",
-    text: "Robust Node.js services with clean architecture and testing.",
+    text: "Node.js services and REST APIs built to be reliable and easy to maintain.",
     span: "",
   },
   {
     icon: "⌘",
-    title: "API Design",
-    text: "REST and GraphQL APIs that are documented, versioned and secure.",
+    title: "API Integration",
+    text: "Connecting frontends to REST APIs and third-party services cleanly.",
     span: "",
   },
   {
     icon: "▤",
-    title: "Databases",
-    text: "Schema design, query tuning and migrations on SQL and NoSQL.",
+    title: "WordPress & WooCommerce",
+    text: "Custom themes and online stores: cart, checkout, shipping and product sync.",
     span: "",
   },
   {
@@ -84,8 +85,8 @@ export const services = [
   },
   {
     icon: "↗",
-    title: "Deployment & DevOps",
-    text: "CI/CD, containers and cloud hosting so releases are boring and safe.",
+    title: "Testing & Debugging",
+    text: "Troubleshooting, performance fixes and automated browser tests with Puppeteer.",
     span: "md:col-span-2",
   },
 ];

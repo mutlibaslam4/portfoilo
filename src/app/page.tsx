@@ -1,11 +1,9 @@
 import About from "@/components/About";
 import BlogTeaser from "@/components/BlogTeaser";
-import Calculator from "@/components/Calculator";
 import Contact from "@/components/Contact";
 import GithubStats from "@/components/GithubStats";
 import Hero from "@/components/Hero";
 import Loader from "@/components/Loader";
-import Pricing from "@/components/Pricing";
 import Services from "@/components/Services";
 // import Testimonials from "@/components/Testimonials"; // hidden until real client reviews are added
 import Work from "@/components/Work";
@@ -33,8 +31,7 @@ export default function Home() {
         <Services />
         <Work />
         {/* <Testimonials /> */}
-        <Pricing />
-        <Calculator />
+        {/* <Pricing /> <Calculator /> — hidden until real packages and prices are decided */}
         <BlogTeaser />
         <Contact />
       </main>

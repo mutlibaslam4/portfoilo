@@ -32,7 +32,7 @@ export default function Work() {
     <section id="work" className="mx-auto max-w-6xl px-5 py-28">
       <SectionHeading eyebrow={t("work.eyebrow")} title={t("work.title")} />
 
-      <div className="mt-10 flex flex-wrap gap-2">
+      <div className={`mt-10 flex-wrap gap-2 ${projects.length > 3 ? "flex" : "hidden"}`}>
         {categories.map((c) => (
           <button
             key={c}

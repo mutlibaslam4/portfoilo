@@ -27,13 +27,13 @@ export default async function CaseStudy(props: PageProps<"/work/[slug]">) {
   if (!p) notFound();
 
   const i = projects.findIndex((x) => x.slug === slug);
-  const next = projects[(i + 1) % projects.length];
+  const next = projects.length > 1 ? projects[(i + 1) % projects.length] : null;
   const meta = [
     ["Client", p.client],
     ["Role", p.role],
     ["Year", p.year],
     ["Category", p.category],
-  ];
+  ].filter((m): m is [string, string] => Boolean(m[1]));
 
   return (
     <main className="relative z-10 mx-auto max-w-5xl px-5 pb-24 pt-32">
@@ -107,14 +107,16 @@ export default async function CaseStudy(props: PageProps<"/work/[slug]">) {
             <p className="mt-1 text-muted">Let&apos;s talk about your project.</p>
           </div>
           <div className="flex flex-wrap gap-3">
-            <a
-              href={p.live}
-              target="_blank"
-              rel="noreferrer"
-              className="rounded-full border border-line px-6 py-3 font-semibold transition hover:border-accent hover:text-accent"
-            >
-              Visit live site ↗
-            </a>
+            {p.live && (
+              <a
+                href={p.live}
+                target="_blank"
+                rel="noreferrer"
+                className="rounded-full border border-line px-6 py-3 font-semibold transition hover:border-accent hover:text-accent"
+              >
+                Visit live site ↗
+              </a>
+            )}
             <Link href="/#contact" className="rounded-full bg-accent px-6 py-3 font-semibold text-[#04120a]">
               Start a project
             </Link>
@@ -122,16 +124,18 @@ export default async function CaseStudy(props: PageProps<"/work/[slug]">) {
         </div>
       </Reveal>
 
-      <Link
-        href={`/work/${next.slug}`}
-        className="group mt-16 flex items-center justify-between gap-6 rounded-3xl border border-line p-8 transition hover:border-accent/60"
-      >
-        <span>
-          <span className="font-mono text-xs uppercase tracking-widest text-muted">Next project</span>
-          <span className="mt-1 block font-display text-3xl font-bold transition group-hover:text-accent">{next.title}</span>
-        </span>
-        <span className="text-3xl transition group-hover:translate-x-2">→</span>
-      </Link>
+      {next && (
+        <Link
+          href={`/work/${next.slug}`}
+          className="group mt-16 flex items-center justify-between gap-6 rounded-3xl border border-line p-8 transition hover:border-accent/60"
+        >
+          <span>
+            <span className="font-mono text-xs uppercase tracking-widest text-muted">Next project</span>
+            <span className="mt-1 block font-display text-3xl font-bold transition group-hover:text-accent">{next.title}</span>
+          </span>
+          <span className="text-3xl transition group-hover:translate-x-2">→</span>
+        </Link>
+      )}
     </main>
   );
 }
