@@ -35,7 +35,7 @@ export default function Hero() {
         initial="hidden"
         animate="show"
         variants={{ hidden: {}, show: { transition: { staggerChildren: 0.12, delayChildren: base } } }}
-        className="relative mx-auto flex max-w-5xl flex-col items-center px-5 text-center"
+        className="relative mx-auto flex w-full max-w-5xl flex-col items-center px-5 text-center"
       >
         <motion.span
           variants={item}
@@ -93,13 +93,13 @@ export default function Hero() {
         </motion.div>
 
         {/* code card */}
-        <motion.div variants={item} className="orbit-border mt-14 w-full max-w-xl p-5 text-left" dir="ltr">
+        <motion.div variants={item} className="orbit-border mt-14 w-full min-w-0 max-w-xl p-4 text-left sm:p-5" dir="ltr">
           <div className="mb-4 flex gap-2">
             <span className="h-3 w-3 rounded-full bg-red-400/80" />
             <span className="h-3 w-3 rounded-full bg-yellow-400/80" />
             <span className="h-3 w-3 rounded-full bg-accent/80" />
           </div>
-          <pre className="font-mono text-sm leading-7 sm:text-[15px]">
+          <pre className="overflow-x-auto font-mono text-[12px] leading-7 sm:text-[15px]">
             {codeLines.map((l, i) => (
               <motion.div
                 key={i}
