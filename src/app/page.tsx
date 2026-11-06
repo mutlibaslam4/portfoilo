@@ -5,7 +5,7 @@ import Hero from "@/components/Hero";
 import Loader from "@/components/Loader";
 import Services from "@/components/Services";
 // import Testimonials from "@/components/Testimonials"; // hidden until real client reviews are added
-import Work from "@/components/Work";
+// import Work from "@/components/Work"; // hidden until public projects are added
 import { profile } from "@/data/site";
 import { siteUrl } from "@/lib/site";
 
@@ -28,7 +28,7 @@ export default function Home() {
         <About />
         {/* <GithubStats /> — hidden: only 1 public repo so far */}
         <Services />
-        <Work />
+        {/* <Work /> */}
         {/* <Testimonials /> */}
         {/* <Pricing /> <Calculator /> — hidden until real packages and prices are decided */}
         <BlogTeaser />

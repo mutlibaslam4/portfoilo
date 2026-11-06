@@ -22,17 +22,15 @@ export const nav = [
   { key: "home", href: "/#home" },
   { key: "about", href: "/#about" },
   { key: "services", href: "/#services" },
-  { key: "work", href: "/#work" },
   { key: "blog", href: "/blog" },
   { key: "contact", href: "/#contact" },
 ];
 
-// numbers below come straight from the CV (4+ yrs overall, 4 yrs frontend + 1 yr backend, TUUR project tests)
+// numbers below come straight from the CV (4+ yrs overall, 4 yrs frontend + 1 yr backend)
 export const stats = [
   { value: 4, suffix: "+", key: "stats.exp", label: "Years experience" },
   { value: 4, suffix: "", key: "stats.frontend", label: "Years frontend" },
   { value: 1, suffix: "", key: "stats.backend", label: "Year backend" },
-  { value: 140, suffix: "+", key: "stats.tests", label: "Automated tests written" },
 ];
 
 // taken from the CV's technical skills
@@ -108,7 +106,7 @@ export const experience = [
     company: "FOCUS",
     role: "Full-Stack Developer",
     period: "Mar 2024 – Present",
-    text: "Full-stack development of web applications using React.js, Next.js, TypeScript and Node.js, from UI to REST APIs. Building and customizing WordPress and Shopify websites and stores. Debugging and optimizing existing applications for performance and usability. Built TUUR Micro-Roastery, an e-commerce storefront on WordPress and WooCommerce: custom theme, one shared cart, cash-on-delivery checkout, UAE shipping rules and automatic product sync, backed by 140+ automated browser tests.",
+    text: "Full-stack development of web applications using React.js, Next.js, TypeScript and Node.js, from UI to REST APIs. Building and customizing WordPress and Shopify websites and stores. Debugging and optimizing existing applications for performance and usability.",
   },
   {
     company: "Digitonic",
