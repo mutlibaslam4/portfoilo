@@ -21,7 +21,7 @@ export const dict = {
     "about.eyebrow": "About",
     "about.title": "Code that looks good and runs even better.",
     "about.p1":
-      "I'm {name}, a {role} with 4 years of frontend and 1 year of backend experience. I build responsive, user-focused web applications with React.js, Next.js and Node.js, and e-commerce stores on WordPress and WooCommerce.",
+      "I'm {name}, a {role} with 4 years of frontend and 1 year of backend experience. I build responsive, user-focused web applications with React.js, Next.js and Node.js, and e-commerce stores on WordPress, WooCommerce and Shopify.",
     "about.p2":
       "I care about reusable components, clean API integration, debugging and performance, and I use AI-assisted development to deliver faster without lowering quality.",
     "stats.exp": "Years experience",

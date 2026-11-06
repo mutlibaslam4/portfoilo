@@ -27,9 +27,9 @@ export const nav = [
   { key: "contact", href: "/#contact" },
 ];
 
-// numbers below come straight from the CV (4 yrs frontend + 1 yr backend, TUUR project tests)
+// numbers below come straight from the CV (4+ yrs overall, 4 yrs frontend + 1 yr backend, TUUR project tests)
 export const stats = [
-  { value: 5, suffix: "+", key: "stats.exp", label: "Years experience" },
+  { value: 4, suffix: "+", key: "stats.exp", label: "Years experience" },
   { value: 4, suffix: "", key: "stats.frontend", label: "Years frontend" },
   { value: 1, suffix: "", key: "stats.backend", label: "Year backend" },
   { value: 140, suffix: "+", key: "stats.tests", label: "Automated tests written" },
@@ -47,6 +47,7 @@ export const techStack = [
   "PHP",
   "WordPress",
   "WooCommerce",
+  "Shopify",
   "REST APIs",
   "Git & GitHub",
   "Puppeteer",
@@ -101,24 +102,24 @@ export const codeLines = [
   { k: "await", rest: " ship(dev);", s: "", tail: "" },
 ];
 
-// from the LinkedIn profile
+// kept in sync with the LinkedIn profile
 export const experience = [
   {
     company: "FOCUS",
-    role: "Frontend Developer",
-    period: "Mar 2023 – Present",
-    text: "Building and maintaining responsive web applications, with a growing focus on Node.js services and REST APIs.",
+    role: "Full-Stack Developer",
+    period: "Mar 2024 – Present",
+    text: "Full-stack development of web applications using React.js, Next.js, TypeScript and Node.js, from UI to REST APIs. Building and customizing WordPress and Shopify websites and stores. Debugging and optimizing existing applications for performance and usability.",
   },
   {
     company: "Digitonic",
     role: "Frontend Developer",
-    period: "2023",
+    period: "Jan 2023 – Feb 2024",
     text: "Developed and maintained responsive web interfaces using modern JavaScript-based technologies.",
   },
   {
     company: "SkySoft.tech",
     role: "Development Intern",
-    period: "Internship",
+    period: "Jul 2022 – Dec 2022",
     text: "Assisted in developing and maintaining web application interfaces.",
   },
   {
