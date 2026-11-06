@@ -1,5 +1,5 @@
 export const profile = {
-  name: "Mutlib Aslam",
+  name: "Muhammad Mutlib Ibraheem",
   role: "Full-Stack Developer",
   email: "mutlibaslam4@gmail.com",
   /** international format, digits only — same number as on the CV */
@@ -14,7 +14,7 @@ export const profile = {
     "Frontend precision. Backend reliability. I turn ideas into polished products that load quickly and scale cleanly.",
   socials: [
     { label: "GitHub", href: "https://github.com/mutlibaslam4" },
-    { label: "LinkedIn", href: "https://www.linkedin.com/in/mutlib-aslam-111186417/" },
+    { label: "LinkedIn", href: "https://www.linkedin.com/in/muhammad-mutlib-ibraheem-111186417/" },
   ],
 };
 
@@ -99,4 +99,32 @@ export const codeLines = [
   { k: "", rest: "  available: ", s: "true", tail: "," },
   { k: "", rest: "", s: "};", tail: "" },
   { k: "await", rest: " ship(dev);", s: "", tail: "" },
+];
+
+// from the LinkedIn profile
+export const experience = [
+  {
+    company: "FOCUS",
+    role: "Frontend Developer",
+    period: "Mar 2023 – Present",
+    text: "Building and maintaining responsive web applications, with a growing focus on Node.js services and REST APIs.",
+  },
+  {
+    company: "Digitonic",
+    role: "Frontend Developer",
+    period: "2023",
+    text: "Developed and maintained responsive web interfaces using modern JavaScript-based technologies.",
+  },
+  {
+    company: "SkySoft.tech",
+    role: "Development Intern",
+    period: "Internship",
+    text: "Assisted in developing and maintaining web application interfaces.",
+  },
+  {
+    company: "Ziauddin University",
+    role: "BS Computer Science",
+    period: "2017 – 2021",
+    text: "",
+  },
 ];

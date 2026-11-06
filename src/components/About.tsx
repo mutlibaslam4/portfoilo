@@ -2,7 +2,7 @@
 
 import { animate, useInView } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
-import { profile, stats } from "@/data/site";
+import { experience, profile, stats } from "@/data/site";
 import { useT } from "@/i18n/useT";
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
@@ -52,6 +52,28 @@ export default function About() {
             </Reveal>
           ))}
         </div>
+      </div>
+
+      <div className="mt-20">
+        <Reveal>
+          <h3 className="font-display text-2xl font-bold">{t("exp.title", "Experience & education")}</h3>
+        </Reveal>
+        <ol className="mt-8 space-y-6 border-l border-line pl-6">
+          {experience.map((e, i) => (
+            <Reveal key={e.company} delay={i * 0.06}>
+              <li className="relative">
+                <span className="absolute -left-[31px] top-2 h-2.5 w-2.5 rounded-full bg-accent" />
+                <p className="font-mono text-xs uppercase tracking-widest text-accent" dir="ltr">
+                  {e.period}
+                </p>
+                <p className="mt-1 text-lg font-semibold">
+                  {e.role} <span className="text-muted">· {e.company}</span>
+                </p>
+                {e.text && <p className="mt-1 max-w-2xl text-muted">{e.text}</p>}
+              </li>
+            </Reveal>
+          ))}
+        </ol>
       </div>
     </section>
   );
