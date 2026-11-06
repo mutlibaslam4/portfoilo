@@ -14,7 +14,7 @@ export const profile = {
     "Frontend precision. Backend reliability. I turn ideas into polished products that load quickly and scale cleanly.",
   socials: [
     { label: "GitHub", href: "https://github.com/mutlibaslam4" },
-    { label: "LinkedIn", href: "https://www.linkedin.com/in/muhammad-mutlib-ibraheem-111186417/" },
+    { label: "LinkedIn", href: "https://www.linkedin.com/in/muhammad-mutlib-ibraheem" },
   ],
 };
 
