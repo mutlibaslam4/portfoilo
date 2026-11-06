@@ -21,9 +21,15 @@ export const dict = {
     "about.eyebrow": "About",
     "about.title": "Code that looks good and runs even better.",
     "about.p1":
-      "I'm {name}, a {role} with 4 years of frontend and 1 year of backend experience. I build responsive, user-focused web applications with React.js, Next.js and Node.js, and e-commerce stores on WordPress, WooCommerce and Shopify.",
+      "I'm {name}, a {role} with 4+ years of experience. I build responsive, user-focused web applications with React.js, Next.js and Node.js, and e-commerce stores on WordPress, WooCommerce and Shopify.",
     "about.p2":
       "I care about reusable components, clean API integration, debugging and performance, and I use AI-assisted development to deliver faster without lowering quality.",
+    "exp.title": "Experience & education",
+    "lang.title": "Languages",
+    "lang.ur": "Urdu",
+    "lang.ur.l": "Native or bilingual",
+    "lang.en": "English",
+    "lang.en.l": "Limited working proficiency",
     "stats.exp": "Years experience",
     "stats.frontend": "Years frontend",
     "stats.backend": "Year backend",
@@ -151,9 +157,15 @@ export const dict = {
     "about.eyebrow": "تعارف",
     "about.title": "ایسا کوڈ جو دیکھنے میں بھی اچھا ہو اور چلنے میں بھی۔",
     "about.p1":
-      "میں {name} ہوں، {role}، جس کے پاس 4 سال فرنٹ اینڈ اور 1 سال بیک اینڈ کا تجربہ ہے۔ میں ری ایکٹ، نیکسٹ جے ایس اور نوڈ جے ایس سے ریسپانسیو ویب ایپلیکیشنز اور ورڈپریس/ووکامرس پر ای کامرس اسٹورز بناتا ہوں۔",
+      "میں {name} ہوں، {role}، جس کے پاس 4+ سال کا تجربہ ہے۔ میں ری ایکٹ، نیکسٹ جے ایس اور نوڈ جے ایس سے ریسپانسیو ویب ایپلیکیشنز اور ورڈپریس/ووکامرس پر ای کامرس اسٹورز بناتا ہوں۔",
     "about.p2":
       "مجھے دوبارہ استعمال ہونے والے کمپونینٹس، صاف اے پی آئی انٹیگریشن، ڈیبگنگ اور پرفارمنس کی فکر رہتی ہے، اور میں اے آئی کی مدد سے معیار گھٹائے بغیر تیزی سے کام مکمل کرتا ہوں۔",
+    "exp.title": "تجربہ اور تعلیم",
+    "lang.title": "زبانیں",
+    "lang.ur": "اردو",
+    "lang.ur.l": "مادری زبان",
+    "lang.en": "انگریزی",
+    "lang.en.l": "محدود کام کی مہارت",
     "stats.exp": "سال کا تجربہ",
     "stats.frontend": "سال فرنٹ اینڈ",
     "stats.backend": "سال بیک اینڈ",

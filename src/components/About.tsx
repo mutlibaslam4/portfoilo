@@ -2,7 +2,7 @@
 
 import { animate, useInView } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
-import { experience, profile, stats } from "@/data/site";
+import { experience, languages, profile, stats } from "@/data/site";
 import { useT } from "@/i18n/useT";
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
@@ -74,6 +74,18 @@ export default function About() {
             </Reveal>
           ))}
         </ol>
+
+        <Reveal>
+          <h3 className="mt-14 font-display text-2xl font-bold">{t("lang.title", "Languages")}</h3>
+          <ul className="mt-4 flex flex-wrap gap-3">
+            {languages.map((l) => (
+              <li key={l.key} className="rounded-2xl border border-line bg-panel px-5 py-3 text-sm">
+                <span className="font-semibold">{t(l.key, l.name)}</span>
+                <span className="text-muted"> · {t(l.levelKey, l.level)}</span>
+              </li>
+            ))}
+          </ul>
+        </Reveal>
       </div>
     </section>
   );

@@ -108,7 +108,7 @@ export const experience = [
     company: "FOCUS",
     role: "Full-Stack Developer",
     period: "Mar 2024 – Present",
-    text: "Full-stack development of web applications using React.js, Next.js, TypeScript and Node.js, from UI to REST APIs. Building and customizing WordPress and Shopify websites and stores. Debugging and optimizing existing applications for performance and usability.",
+    text: "Full-stack development of web applications using React.js, Next.js, TypeScript and Node.js, from UI to REST APIs. Building and customizing WordPress and Shopify websites and stores. Debugging and optimizing existing applications for performance and usability. Project: TUUR Micro-Roastery, a WordPress + WooCommerce storefront with a custom theme, one shared cart, cash-on-delivery checkout, UAE shipping rules, automatic product sync and 140+ automated browser tests.",
   },
   {
     company: "Digitonic",
@@ -128,4 +128,10 @@ export const experience = [
     period: "2017 – 2021",
     text: "",
   },
+];
+
+// from the LinkedIn profile
+export const languages = [
+  { key: "lang.ur", name: "Urdu", level: "Native or bilingual", levelKey: "lang.ur.l" },
+  { key: "lang.en", name: "English", level: "Limited working proficiency", levelKey: "lang.en.l" },
 ];
