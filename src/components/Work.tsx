@@ -2,7 +2,6 @@
 
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
-import Link from "next/link";
 import { useEffect, useState, useSyncExternalStore } from "react";
 import { createPortal } from "react-dom";
 import { categories, projects, type Category, type Project } from "@/data/projects";
@@ -146,15 +145,6 @@ export default function Work() {
                         </span>
                       ))}
                     </div>
-                  </div>
-                  <div className="border-t border-line p-6">
-                    <Link
-                      href={`/work/${open.slug}`}
-                      onClick={() => setOpen(null)}
-                      className="inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 font-semibold text-[#04120a] transition hover:brightness-110"
-                    >
-                      {t("work.case")} →
-                    </Link>
                   </div>
                   <button
                     aria-label="Close"

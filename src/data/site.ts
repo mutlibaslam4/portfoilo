@@ -22,6 +22,7 @@ export const nav = [
   { key: "home", href: "/#home" },
   { key: "about", href: "/#about" },
   { key: "services", href: "/#services" },
+  { key: "work", href: "/#work" },
   { key: "blog", href: "/blog" },
   { key: "contact", href: "/#contact" },
 ];

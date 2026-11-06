@@ -67,6 +67,14 @@ export default function Hero() {
         <motion.div variants={item} className="mt-9 flex flex-wrap items-center justify-center gap-4">
           <Magnetic>
             <a
+              href="#work"
+              className="block rounded-full bg-accent px-7 py-3.5 font-semibold text-[#04120a] transition hover:brightness-110"
+            >
+              {t("hero.view")}
+            </a>
+          </Magnetic>
+          <Magnetic>
+            <a
               href="#contact"
               className="block rounded-full border border-line px-7 py-3.5 font-semibold transition hover:border-accent hover:text-accent"
             >
